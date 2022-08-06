@@ -1,0 +1,158 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --Darkcyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+    --Verydarkblue: hsl(212, 21%, 14%);
+    --Darkgrayisblue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+    --font1: 'Montserrat', sans-serif;
+    --font2: 'Fraunces', serif;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--Cream);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container section{
+    display: flex;
+    width: 650px;
+    height: 500px;
+    background-color: var(--White);
+    border-radius: 10px;
+}
+
+.container section .imagem img{
+    height: 100%;
+    width: 100%;
+    border-radius: 10px 0 0 10px;
+}
+
+.container section .infomation{
+    width: 50%;
+    padding: 40px;
+}
+
+.container section .infomation h2{
+    text-transform: uppercase;
+    font-size: 1em;
+    color: var(--Darkgrayisblue);
+    font-weight: 600;
+    font-family: var(--font1);
+    letter-spacing: .4rem;
+}
+
+.container section .infomation .name{
+    font-family: var(--font2);
+    font-size: 2.1em;
+    text-align: left;
+    margin: 25px 0 0 0;
+}
+
+.container section .infomation .description{
+    font-family: var(--font1);
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--Darkgrayisblue);
+    line-height: 1.7em;
+    margin-top: 25px;
+}
+
+.container section .infomation .price{
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.container section .infomation .price .price_principal{
+    display: inline-block;
+    font-family: var(--font2);
+    font-size: 2em;
+    color: var(--Darkcyan);
+    margin-right: 25px;
+}
+
+.container section .infomation .price .price_prev{
+    display: inline-block;
+    font-family: var(--font1);
+    font-size: 1em;
+    color: var(--Darkgrayisblue);
+    text-decoration: line-through;
+}
+
+.container section .infomation .buy{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+    background-color: var(--Darkcyan);
+    border: none;
+    border-radius: 8px;
+    margin-top: 25px;
+}
+
+.container section .infomation .buy:hover{
+    cursor: pointer;
+    background-color: #1a4031;
+}
+
+.container section .infomation .buy p{
+    font-family: var(--font1);
+    color: white;
+    font-weight: 700;
+    margin-left: 10px;
+}
+
+@media (max-width: 650px){
+    .container section{
+        display: flex;
+        width: 375px;
+        height: 680px;
+        flex-direction: column;
+    }
+
+    .container section .infomation{
+        width: 100%;
+        padding: 30px;
+    }
+
+    .container section .imagem img{
+        border-radius: 10px 10px 0 0;
+        transition: 0.5s;
+    }
+
+    .container section .infomation .name{
+        margin: 10px 0 0 0;
+        transition: 0.5s;
+    }
+
+    .container section .infomation .description{
+        margin-top: 15px;
+        margin-right: 20px;
+        transition: 0.5s;
+    }
+    
+    .container section .infomation .price{
+        margin-top: 25px;
+        transition: 0.5s;
+    }
+    
+    .container section .infomation .buy{
+        margin-top: 20px;
+        transition: 0.5s;
+    }
+}
